@@ -1,0 +1,19 @@
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  color: #FFFFFF;
+  font-family: Bungee, sans-serif;
+  font-weight: 600;
+  background-size: 120px;
+  background-color: #4056A1;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}

@@ -23,3 +23,13 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+ }
+
+ .nav {
+  font-family: Bungee, sans-serif;
+  font-weight: 600;
+ }

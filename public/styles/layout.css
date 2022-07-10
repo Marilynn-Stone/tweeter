@@ -25,6 +25,14 @@ body {
  */
 
  body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
+ }
+
+ .container {
+  width: 90%;
+  background-color: #f4f1ec;
  }

@@ -42,16 +42,27 @@
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <h2 class="header-name">
+            Your Name 
+          </h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
-      <h1>This is just a test</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet aliquam id diam maecenas ultricies mi eget mauris. Fames ac turpis egestas integer. Sed vulputate mi sit amet mauris. Convallis a cras semper auctor neque vitae. Aliquam sem et tortor consequat id porta. Libero justo laoreet sit amet. Vel eros donec ac odio tempor orci dapibus ultrices in. Urna condimentum mattis pellentesque id. Venenatis a condimentum vitae sapien pellentesque habitant. Aenean euismod elementum nisi quis eleifend. Enim ut sem viverra aliquet eget sit amet tellus cras. Augue eget arcu dictum varius. Elementum curabitur vitae nunc sed velit dignissim. Dui sapien eget mi proin sed. Faucibus et molestie ac feugiat sed lectus.
-      </p>
+    <main class="main">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form class="tweet-form" method="POST" action="/tweets">
+          <div class="tweet-compose">
+            <label class="tweet-label" for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+         </div>
+          <div class="tweet-submit">
+            <button class="tweet-button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>

@@ -2,7 +2,7 @@
  * Header specific CSS
  */
 
- .header {
+.header {
   display: flex;
   width: 100%;
   height: 400px;
@@ -13,7 +13,14 @@
   background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
  }
 
- .profile-pic {
+.profile-pic {
   max-width: 200px;
   max-height: auto;
+ }
+
+ /* changes made to have appearance of nav and header match more closely  to the Compass example. 
+ */
+
+.header-name {
+  margin-block-start: 0;
  }

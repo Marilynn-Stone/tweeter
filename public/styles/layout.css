@@ -43,14 +43,22 @@ body {
 
 .tweet-compose {
   display: flex;
-  border-bottom: solid;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
 .tweet-label {
   font-weight: bold;
-  align-self: center;
+  align-self: flex-start;
+}
+
+#tweet-text {
+  background-color: #f4f1ec;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: solid;
 }
 
 .tweet-submit {
@@ -61,8 +69,11 @@ body {
   margin-block-start: 0.83em;
 }
 
+.counter-red {
+  color: red
+}
+
 .tweet-button {
   background-color: #4056A1;
   color: #FFFFFF;
 }
-

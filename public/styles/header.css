@@ -14,13 +14,5 @@
  }
 
 .profile-pic {
-  max-width: 200px;
-  max-height: auto;
- }
-
- /* changes made to have appearance of nav and header match more closely  to the Compass example. 
- */
-
-.header-name {
-  margin-block-start: 0;
+  width: 200px;
  }

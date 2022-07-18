@@ -40,27 +40,21 @@ main {
 /* Tweet composition section
 */
 
-.tweet-form {
-  width: 100%
-}
-
 .tweet-compose {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.tweet-label {
+.tweet-compose label {
   font-weight: bold;
-  align-self: flex-start;
 }
 
-#tweet-text {
+.tweet-compose textarea {
   background-color: #f4f1ec;
-  width: 100%;
+  height: 100px;
   border: none;
   outline: none;
+  resize: none;
   border-bottom: solid;
 }
 
@@ -69,54 +63,63 @@ main {
   justify-content: space-between;
   font-family: Bungee, sans-serif;
   font-weight: 300;
-  margin-block-start: 0.83em;
+  margin-block-start: 13px;
+}
+
+.tweet-submit button {
+  background-color: #4056A1;
+  color: #FFFFFF;
 }
 
 .counter-red {
   color: red
 }
 
-.tweet-button {
-  background-color: #4056A1;
-  color: #FFFFFF;
-}
-
 /* Existing tweet section
 */
 
-article.tweet {
+.tweet article{
   border: solid;
-  margin-block-start:0.83em
+  margin-block-start:13px
 }
 
-article.tweet header {
+.tweet:hover {
+  box-shadow: 5px, 5px blue;
+}
+
+.tweet header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 10px;
 }
 
-article.tweet header p {
+.fa-rocket {
+  margin-right: 15px
+}
+
+.tweet header p {
   margin-block-end: 0;
   margin-block-start: 0;
-  display: flex;
-  justify-content: space-between;
 }
 
-article.tweet footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 20px;
-}
-
-article.tweet footer nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
-div.tweet-content {
+.tweet-content {
   border-bottom: solid;
   margin: 10px;
   padding: 15px;
   font-weight: bold;
+}
+
+.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.tweet footer nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px
 }

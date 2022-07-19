@@ -30,6 +30,7 @@ body {
   align-items: center;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
+  margin-top: 80px
 }
 
 main {
@@ -78,7 +79,7 @@ main {
 /* Existing tweet section
 */
 
-.tweet article {
+.tweet {
   border: solid;
   margin-block-start:13px
 }
@@ -92,10 +93,6 @@ main {
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
-}
-
-.fa-rocket {
-  margin-right: 15px
 }
 
 .tweet header p {

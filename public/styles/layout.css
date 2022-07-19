@@ -78,13 +78,13 @@ main {
 /* Existing tweet section
 */
 
-.tweet article{
+.tweet article {
   border: solid;
   margin-block-start:13px
 }
 
 .tweet:hover {
-  box-shadow: 5px, 5px blue;
+  box-shadow: 5px 5px 5px #708deb;
 }
 
 .tweet header {
@@ -122,4 +122,8 @@ main {
   display: flex;
   justify-content: space-around;
   gap: 5px
+}
+
+.tweet footer nav > i:hover {
+  color: #B22222
 }

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 $(document).ready(function() {
-  console.log("Dom is ready");
+  console.log("character counter is ready");
 
   $("textarea").on("input", function() {
     const charCount = $(this).val().length;

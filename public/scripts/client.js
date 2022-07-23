@@ -1,8 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 /* eslint-disable no-undef */
 
 const tweetData = [
@@ -33,13 +28,6 @@ const tweetData = [
 $(document).ready(function() {
   console.log("client is ready");
 
-  const $renderTweets = (tweets) => {
-    for (const tweet of tweets) {
-      const newTweet = $createTweetElement(tweet);
-      $('#tweets-container').append(newTweet);
-    }
-  };
-  
   const $createTweetElement = (tweetData) => {
     const $tweet = `
     <article class="tweet">
@@ -61,6 +49,18 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  const $renderTweets = (tweets) => {
+    for (const tweet of tweets) {
+      const newTweet = $createTweetElement(tweet);
+      $('#tweets-container').append(newTweet);
+    }
+  };
+  
   $renderTweets(tweetData);
+
+  $("form").submit(function(event) {
+    event.preventDefault();
+    $.post("/tweets", $("#tweet-text").serialize());
+  });
 });
 

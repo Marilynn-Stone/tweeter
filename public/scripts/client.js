@@ -3,11 +3,11 @@
 $(document).ready(function() {
   console.log("client is ready");
 
+
+
   $loadTweets();
 
   $newTweet();
-
-  
 
 });
 
@@ -52,19 +52,24 @@ const $loadTweets = () => {
     });
 };
 
+const errorMessage = (msg) => {
+  $("#error-message").html(msg);
+};
+
 const $newTweet = () => {
   $("form").on("submit", function(event) {
     event.preventDefault();
     if ($("form textarea").val().length === 0) {
-      alert("Please enter some text before submitting tweet.");
+      errorMessage("Please enter some text before submitting tweet.");
+    } else if ($("form textarea").val().length > 140) {
+      errorMessage("Your tweet is too long to submit.");
+    } else {
+      $.post("/tweets", $(this).serialize())
+        .then(() => {
+          $loadTweets();
+        });
+      location.reload();
     }
-    if ($("form textarea").val().length > 140) {
-      alert("Your tweet is too long to submit.");
-    }
-    $.post("/tweets", $(this).serialize())
-      .then(() => {
-        $loadTweets();
-      });
-    location.reload();
   });
 };
+

@@ -35,6 +35,12 @@ $(document).ready(function () {
   
   $("form").on("submit", function(event) {
     event.preventDefault();
+    if ($("form textarea").val().length === 0) {
+      alert("Please enter some text before submitting tweet.");
+    }
+    if ($("form textarea").val().length > 140) {
+      alert("Your tweet is too long to submit.");
+    }
     $.ajax("/tweets", { method: "POST", data:$(this).serialize()});
   });
 

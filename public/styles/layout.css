@@ -41,6 +41,15 @@ main {
 /* Tweet composition section
 */
 
+#error-message {
+  background-color: #f99595;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  margin: 15px;
+  color:#B22222;
+  width: fit-content;
+  height: fit-content;
+}
+
 .tweet-compose {
   display: flex;
   flex-direction: column;

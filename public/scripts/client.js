@@ -3,12 +3,11 @@
 $(document).ready(function() {
   console.log("client is ready");
 
-
-
   $loadTweets();
 
   $newTweet();
-
+  
+  $("#error-message").hide();
 });
 
 const safeHTML = function(str) {
@@ -54,13 +53,14 @@ const $loadTweets = () => {
 
 const errorMessage = (msg) => {
   $("#error-message").html(msg);
+  $("#error-message").slideDown();
 };
 
 const $newTweet = () => {
   $("form").on("submit", function(event) {
     event.preventDefault();
     if ($("form textarea").val().length === 0) {
-      errorMessage("Please enter some text before submitting tweet.");
+      errorMessage("\u2A02 Please enter some text before submitting tweet. \u2A02");
     } else if ($("form textarea").val().length > 140) {
       errorMessage("Your tweet is too long to submit.");
     } else {
@@ -72,4 +72,3 @@ const $newTweet = () => {
     }
   });
 };
-

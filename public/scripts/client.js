@@ -6,7 +6,7 @@ $(document).ready(function() {
   $loadTweets();
 
   $newTweet();
-  
+
   $("#error-message").hide();
 });
 
@@ -62,7 +62,7 @@ const $newTweet = () => {
     if ($("form textarea").val().length === 0) {
       errorMessage("\u2A02 Please enter some text before submitting tweet. \u2A02");
     } else if ($("form textarea").val().length > 140) {
-      errorMessage("Your tweet is too long to submit.");
+      errorMessage("\u2A02 Your tweet is too long to submit. \u2A02");
     } else {
       $.post("/tweets", $(this).serialize())
         .then(() => {

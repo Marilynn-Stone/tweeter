@@ -30,7 +30,7 @@ body {
   align-items: center;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
-  margin-top: 80px
+  min-width: 350px;
 }
 
 main {
@@ -90,7 +90,7 @@ main {
 
 .tweet {
   border: solid;
-  margin-block-start:13px
+  margin-block-start: 13px;
 }
 
 .tweet:hover {
@@ -132,4 +132,17 @@ main {
 
 .tweet footer nav > i:hover {
   color: #B22222
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    margin-right: 30px;
+  }
+
+  header {
+    margin-right: 40px;
+    margin-left: 30px;
+  }
+
 }

@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 $(document).ready(function() {
   console.log("client is ready");
 
@@ -10,17 +8,20 @@ $(document).ready(function() {
   $("#error-message").hide();
 });
 
+// Escape function to prevent XSS attack.
+
 const safeHTML = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// Two functions that work together to dynamically render new tweets.
 const $createTweetElement = (tweetData) => {
   const $tweet = `
     <article class="tweet">
       <header> 
-        <span><i ${tweetData.user.avatars}></i>${tweetData.user.name}</span>
+        <span><img src = ${tweetData.user.avatars}></img>${tweetData.user.name}</span>
         <p>${tweetData.user.handle}</p>
       </header>
       <div class="tweet-content">${safeHTML(tweetData.content.text)}</div>
@@ -44,6 +45,7 @@ const $renderTweets = (tweets) => {
   }
 };
 
+// Fetch tweets from /tweets page.
 const $loadTweets = () => {
   $.get("/tweets")
     .then(data => {
@@ -51,11 +53,13 @@ const $loadTweets = () => {
     });
 };
 
+// Animate and display validation error messages.
 const errorMessage = (msg) => {
   $("#error-message").html(msg);
   $("#error-message").slideDown();
 };
 
+// Submit new tweet without refreshing page. Change form data into a query string. Implement tweet validation.
 const $newTweet = () => {
   $("form").on("submit", function(event) {
     event.preventDefault();

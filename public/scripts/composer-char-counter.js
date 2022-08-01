@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("character counter is ready");
 
   $("textarea").on("input", function() {
     const charCount = $(this).val().length;

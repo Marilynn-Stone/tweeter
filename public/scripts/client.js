@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("client is ready");
 
   $loadTweets();
 
@@ -72,7 +71,7 @@ const $newTweet = () => {
         .then(() => {
           $loadTweets();
         });
-      location.reload();
+      $(this).trigger('reset');
     }
   });
 };

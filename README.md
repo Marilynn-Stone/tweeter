@@ -7,7 +7,7 @@ Tweeter is a simple, single-page Twitter clone. Users can create short posts of 
 !["Desktop View"](https://github.com/Marilynn-Stone/my-tweeter/blob/master/docs/desktop-view.png?raw=true)
 !["Tablet View"](https://github.com/Marilynn-Stone/my-tweeter/blob/master/docs/tablet-view.png?raw=true)
 !["Empty Submission Error Message](https://github.com/Marilynn-Stone/my-tweeter/blob/master/docs/empty-submission-error.png?raw=true)
-!["Max Character Error Message](https://github.com/Marilynn-Stone/my-tweeter/blob/master/docs/max-character%20-error.png?raw=true)
+!["Max Character Error Message](https://github.com/Marilynn-Stone/my-tweeter/blob/master/docs/max-character-error.png?raw=true)
 
 ## Dependencies
 

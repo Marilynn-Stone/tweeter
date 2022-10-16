@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone. It allows students to practice their HTML, CSS, JS, jQuery and AJAX front-end skills.
+Tweeter is a simple, single-page Twitter clone. Users can create short posts of up to 140 characters and have them append to the main page. Posts are sequential, with the most recent posts appearing at the top of the page. To do so, Tweeter fetches a list of posts from a simplified ‘server’ and allows users to add posts to this list dynamically. All requests will be made asynchronously.
 
 ## Screenshots
 
@@ -20,5 +20,5 @@ Tweeter is a simple, single-page Twitter clone. It allows students to practice t
 ## Getting Started
 
 3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+5. Go to <http://localhost:8080/> in your browser.
